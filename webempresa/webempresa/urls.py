@@ -40,3 +40,8 @@ urlpatterns = [
 if settings.DEBUG:
     from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Custom tittle for admin
+admin.site.site_header = "La Caffetiera"
+admin.site.index_tittle = "Panel de administrador"
+admin.site.tittle = "La Caffetiera"
