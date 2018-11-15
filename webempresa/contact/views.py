@@ -18,7 +18,6 @@ def contact(request):
                 "La Caffetira: Nuevo mensaje de contacto",
                 "De {} <{}>\n\nEscribió:\n\n{}".format(name,email,content),
                 "no-contestar@inbox.mailtrap.io",
-                ["sw_op@hotmail.com"],
                 reply_to=[email]
             ) 
             try:

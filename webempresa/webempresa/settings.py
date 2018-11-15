@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
+
+
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -87,13 +90,23 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
+    #Windows
+    #'default': {
+    #    'ENGINE': 'mysql_cymysql',
+    #    'NAME': 'empresa',
+    #    'USER': 'root',
+    #    'PASSWORD': '',
+    #    'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+    #    'PORT': '3306',
+    #}
+    #Linux
     'default': {
-        'ENGINE': 'mysql_cymysql',
-        'NAME': 'empresa',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -157,7 +170,14 @@ CKEDITOR_CONFIGS = {
 }
 
 #Email config
-EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = '4686294b9257cb'
-EMAIL_HOST_PASSWORD = '6f584eb11b526c'
-EMAIL_PORT = '2525'
+#EMAIL_HOST = 'smtp.mailtrap.io'
+#EMAIL_HOST_USER = '4686294b9257cb'
+#EMAIL_HOST_PASSWORD = '6f584eb11b526c'
+#EMAIL_PORT = '2525'
+
+#For gmail or google apps
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'mayakaaj.plat@gmail.com'
+EMAIL_HOST_PASSWORD = '"123cuatro56SP"'
+EMAIL_PORT = 587
