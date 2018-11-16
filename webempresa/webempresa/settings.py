@@ -91,23 +91,23 @@ DATABASES = {
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
     #Windows
-    #'default': {
-    #    'ENGINE': 'mysql_cymysql',
-    #    'NAME': 'empresa',
-    #    'USER': 'root',
-    #    'PASSWORD': '',
-    #    'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-    #    'PORT': '3306',
-    #}
-    #Linux
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myproject',
-        'USER': 'myprojectuser',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '',
+       'ENGINE': 'mysql_cymysql',
+       'NAME': 'empresa',
+       'USER': 'root',
+       'PASSWORD': '',
+       'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+       'PORT': '3306',
     }
+    #Linux
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'myproject',
+    #     'USER': 'myprojectuser',
+    #     'PASSWORD': 'password',
+    #     'HOST': 'localhost',
+    #     'PORT': '',
+    # }
 }
 
 

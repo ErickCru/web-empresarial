@@ -13,13 +13,15 @@ def contact(request):
             name = request.POST.get('name', '')
             email = request.POST.get('email', '')
             content = request.POST.get('mensaje', '')
-            #Enviamos el correo y redireccionamos
+            # Enviamos el correo y redireccionamos
             email = EmailMessage(
                 "La Caffetira: Nuevo mensaje de contacto",
                 "De {} <{}>\n\nEscribió:\n\n{}".format(name,email,content),
-                "no-contestar@inbox.mailtrap.io",
+                "",
+                ["mayakaaj.plat@gmail.com"], # Mi correo donde llegarán los correso de las personas.
                 reply_to=[email]
             ) 
+
             try:
                 email.send()
                 #Todo ha ido bien, redireccionamos a ok
